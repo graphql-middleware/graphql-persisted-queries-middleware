@@ -1,0 +1,62 @@
+{
+  "name": "graphql-persisted-queries-middleware",
+  "version": "0.0.0",
+  "description": "GraphQL server middleware for automatic persisted queries",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "rm -rf dist && tsc -d",
+    "test": "nyc cucumber-js --compiler ts:ts-node/register test/features/ -r test/step_definitions/ -f json:test/report/cucumber_report.json",
+    "dposttest": "node test/createReport.js && nyc report --reporter=text-lcov | coveralls",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "Kim Brandwijk <kim.brandwijk@gmail.com>",
+  "license": "MIT",
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "text",
+      "lcov",
+      "json"
+    ],
+    "all": true,
+    "sourceMap": true,
+    "instrument": true
+  },
+  "dependencies": {
+    "cucumber-html-reporter": "^3.0.4"
+  },
+  "devDependencies": {
+    "@types/cucumber": "3.1.1",
+    "@types/node": "8.5.2",
+    "coveralls": "3.0.0",
+    "cucumber": "3.2.0",
+    "nyc": "11.4.1",
+    "semantic-release": "11.2.0",
+    "ts-node": "4.1.0",
+    "typescript": "2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supergraphql/graphql-persisted-queries-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/supergraphql/graphql-persisted-queries-middleware/issues"
+  },
+  "homepage": "https://github.com/supergraphql/graphql-persisted-queries-middleware#readme"
+}
