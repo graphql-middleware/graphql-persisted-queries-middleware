@@ -9,7 +9,8 @@ node_js:
   - '9'
   - '8'
 after_success:
-  - npm run semantic-release
+  - npm install -g travis-deploy-once@4
+  - travis-deploy-once "npm run semantic-release"
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
