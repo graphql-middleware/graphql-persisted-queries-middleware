@@ -8,7 +8,7 @@
     "prepublish": "npm run build",
     "build": "rm -rf dist && tsc -d",
     "test": "nyc cucumber-js --compiler ts:ts-node/register test/features/ -r test/step_definitions/ -f json:test/report/cucumber_report.json",
-    "dposttest": "node test/createReport.js && nyc report --reporter=text-lcov | coveralls",
+    "posttest": "node test/createReport.js && nyc report --reporter=text-lcov | coveralls",
     "semantic-release": "semantic-release"
   },
   "keywords": [
