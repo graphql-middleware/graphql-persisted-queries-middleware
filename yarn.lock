@@ -64,9 +64,9 @@
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@types/cucumber/-/cucumber-3.2.1.tgz#4269502cc1f8cc4b4bfe4fe4bc3bbe19226600bb"
 
-"@types/node@8.5.5":
-  version "8.5.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.5.tgz#6f9e8164ae1a55a9beb1d2571cfb7acf9d720c61"
+"@types/node@8.5.7":
+  version "8.5.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.7.tgz#9c498c35af354dcfbca3790fb2e81129e93cf0e2"
 
 "@types/strip-bom@^3.0.0":
   version "3.0.0"
