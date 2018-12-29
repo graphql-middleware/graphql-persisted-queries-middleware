@@ -46,7 +46,7 @@
     "@types/cucumber": "3.2.1",
     "@types/node": "8.5.7",
     "coveralls": "3.0.0",
-    "cucumber": "3.2.1",
+    "cucumber": "5.1.0",
     "nyc": "11.4.1",
     "semantic-release": "12.1.0",
     "ts-node": "4.1.0",
